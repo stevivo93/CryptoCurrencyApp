@@ -1,0 +1,22 @@
+.bestPerformance {
+    border: 1px #e0e0e0 solid;
+    border-radius: 3px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.ReactTable {
+    font-size: 12px;
+}
+
+.bestPerformance .nav-tabs li {
+    width: 33%;
+    text-align: center;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{
+    background-color: #4fa149;
+    color: white;
+    outline: 0;
+}

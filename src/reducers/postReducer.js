@@ -2,7 +2,6 @@ import {FETCH_POST, BUY_POST, SELL_POST} from "../actions";
 
 const initialState = {
     items: [],
-    item: {},
     total: 0,
     Money: 10000000,
     CC: [{id: 'bitcoin', has: 1.5, name: 'Bitcoin', symbol: 'BTC', price_idr: null}, {
@@ -12,6 +11,7 @@ const initialState = {
         symbol: 'LTC',
         price_idr: null
     }],
+    history:[],
 };
 
 export default function (state = initialState, action) {
@@ -50,11 +50,16 @@ export default function (state = initialState, action) {
                 let val = state.CC[i].has * state.CC[i].price_idr;
                 totals = totals + val;
             }
+
+            state.history.push(action.payload.history);
+
+            console.log(state.history)
             return {
                 ...state,
                 total: totals,
                 Money: state.Money - action.payload.money,
-                CC: state.CC
+                CC: state.CC,
+                history: state.history
             };
         case SELL_POST:
 
@@ -71,11 +76,14 @@ export default function (state = initialState, action) {
                 totalss = totalss + val;
             }
 
+            state.history.push(action.payload.history);
+
             return {
                 ...state,
                 total: totalss,
                 Money: state.Money + action.payload.money,
-                CC: state.CC
+                CC: state.CC,
+                history: state.history
             };
         default:
             return state;
