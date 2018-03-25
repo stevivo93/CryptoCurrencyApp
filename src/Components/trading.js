@@ -108,10 +108,13 @@ class Trading extends Component {
             let pickedCurrency = form[0].value;
             let buy = parseFloat(form[1].value.replace(/,/g, ''));
             let getFromBuy = parseFloat(form[2].value.replace(/,/g, ''));
+            // let d = new Date();
+            let t = Date.now();
             const post = {
                 cc: pickedCurrency,
                 money: buy,
-                get: getFromBuy
+                get: getFromBuy,
+                time: t,
             };
             if (buy <= max) {
                 this.props.buyPosts(post)
@@ -139,10 +142,14 @@ class Trading extends Component {
             let pickedCurrency = form[0].value;
             let sell = parseFloat(form[1].value.replace(/,/g, ''));
             let getFromSell = parseFloat(form[2].value.replace(/,/g, ''));
+            // let d = new Date();
+            // let t = d.getTime();
+            let t = Date.now();
             const post = {
                 cc: pickedCurrency,
                 coin: sell,
-                get: getFromSell
+                get: getFromSell,
+                time: t,
             };
             if (sell <= max) {
                 this.props.sellPosts(post);

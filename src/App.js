@@ -4,6 +4,8 @@ import './css/App.css';
 import TableList from './Components/tableList';
 import Portofolio from './Components/portofolio';
 import Trading from './Components/trading';
+import BestPerformance from './Components/bestPerformance';
+import History from './Components/history';
 import {Row, Col} from 'react-bootstrap';
 
 import {Provider} from 'react-redux';
@@ -38,9 +40,11 @@ class App extends Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col sm={6}>
+                            <Col sm={7}>
+                                <History/>
                             </Col>
-                            <Col sm={6}>
+                            <Col sm={5}>
+                                <BestPerformance/>
                             </Col>
                         </Row>
                     </div>

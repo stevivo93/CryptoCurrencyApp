@@ -7,7 +7,9 @@ export const fetchPosts = () => dispatch => {
             posts[key].market_cap_idr = parseFloat(posts[key].market_cap_idr);
             posts[key].price_idr = parseFloat(posts[key].price_idr);
             posts[key]['24h_volume_idr'] = parseFloat(posts[key]['24h_volume_idr']);
+            posts[key].percent_change_1h = parseFloat(posts[key].percent_change_1h);
             posts[key].percent_change_24h = parseFloat(posts[key].percent_change_24h);
+            posts[key].percent_change_7d = parseFloat(posts[key].percent_change_7d);
             posts[key].total_supply = parseFloat(posts[key].total_supply)
         });
         dispatch({
@@ -45,6 +47,15 @@ export const buyPosts = (postData) => dispatch => {
                 name: res[0].name,
                 symbol: res[0].symbol,
                 price_idr: null
+            },
+            history: {
+                id: postData.cc,
+                has: postData.get,
+                money: postData.money,
+                name: res[0].name,
+                symbol: res[0].symbol,
+                time: postData.time,
+                action: "Buy"
             }
         };
         dispatch({
@@ -65,6 +76,15 @@ export const sellPosts = (postData) => dispatch => {
                 name: res[0].name,
                 symbol: res[0].symbol,
                 price_idr: null
+            },
+            history: {
+                id: postData.cc,
+                has: postData.coin,
+                money: postData.get,
+                name: res[0].name,
+                symbol: res[0].symbol,
+                time: postData.time,
+                action: "Sell"
             }
         };
         dispatch({
