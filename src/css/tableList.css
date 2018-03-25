@@ -1,0 +1,12 @@
+/*.tableList {*/
+    /*height: 550px;*/
+/*}*/
+
+.ReactTable .rt-thead .rt-resizable-header {
+    outline: 0;
+}
+
+.ReactTable {
+    font-size: 12px;
+    height: 550px;
+}

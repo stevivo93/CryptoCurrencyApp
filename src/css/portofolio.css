@@ -1,0 +1,59 @@
+.portofolio {
+    height: 270px;
+    border: 1px #e0e0e0 solid;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.portofolio .portofolio-total {
+    text-align: center;
+    font-size: 16px;
+    height: 120px;
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
+.portofolio .portofolio-total .total-value{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.portofolio .portofolio-total .title{
+    font-weight: bold;
+    float: left;
+    font-size: 12px;
+}
+
+.portofolio .portofolio-total .total-text{
+    font-size: 10px;
+}
+
+.portofolio .portofolio-list {
+    height: 145px;
+    padding: 0;
+    overflow-y: auto;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.portofolio .portofolio-list table{
+    width: 100%;
+}
+
+.portofolio .portofolio-list tr{
+    height: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.portofolio .portofolio-list td{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.portofolio .portofolio-list span.portofolio-coin{
+    font-size: 12px;
+}
+
+.portofolio .portofolio-list span.portofolio-inrupiah{
+    font-size: 8px;
+}

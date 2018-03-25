@@ -1,0 +1,65 @@
+.trading {
+    width: 100%;
+}
+
+.nav-tabs li {
+    width: 50%;
+    text-align: center;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{
+    background-color: #4fa149;
+    color: white;
+    outline: 0;
+}
+
+.filter-box {
+    border: 1px #e0e0e0 solid;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 8px;
+}
+
+.filter-box select {
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    border: 1px #e0e0e0 solid;
+    padding: 6px;
+    margin-bottom: 8px;
+    outline: 0;
+}
+
+.filter-box input {
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 3px;
+    border: 1px #e0e0e0 solid;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+.filter-box button {
+    width: 100%;
+    background-color: #4fa149;
+    color: white;
+    border-radius: 3px;
+    border: 1px #e0e0e0 solid;
+    padding: 6px;
+    margin-top: 10px;
+}
+
+.filter-box .code-currency {
+    float: right;
+}
+
+div.modal-body {
+    height : 180px;
+    text-align: center;
+}
+
+div.modal-header {
+    text-align: center;
+    color: white;
+    background-color: orangered;
+}
