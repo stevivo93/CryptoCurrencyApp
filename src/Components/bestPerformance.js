@@ -185,7 +185,7 @@ class BestPerformance extends Component {
 
 BestPerformance.propTypes = {
     fetchPosts: PropTypes.func.isRequired,
-    posts: PropTypes.array.isRequired
+    // posts: PropTypes.array.isRequired
 };
 
 const mapStateToProps = state => ({

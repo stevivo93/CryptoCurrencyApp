@@ -25,13 +25,14 @@ class Portofolio extends Component {
                 </div>
                 <div className="portofolio-list">
                     <table>
-                        <tr>
+                        <tbody>
+                        <tr key={'rupiah'}>
                             <td>Rupiah</td>
                             <td align="right"><NumberFormat value={this.props.Money} displayType={'text'}
                                                             thousandSeparator={true}
                                                             prefix={'Rp '}/></td>
                         </tr>
-                        {this.props.CC.map(p => <tr>
+                        {this.props.CC.map((p,idx) => <tr key={idx}>
                             <td>{p.name}</td>
                             <td align="right"><span className="portofolio-coin">{p.has} {p.symbol}</span><br/><span
                                 className="portofolio-inrupiah"><NumberFormat value={p.has * p.price_idr}
@@ -39,6 +40,7 @@ class Portofolio extends Component {
                                                                               thousandSeparator={true}
                                                                               prefix={'Rp '}/></span></td>
                         </tr>)}
+                        </tbody>
                     </table>
                 </div>
             </div>

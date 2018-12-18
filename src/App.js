@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-// import logo from './logo.svg';
 import './css/App.css';
 import TableList from './Components/tableList';
 import Portofolio from './Components/portofolio';
@@ -11,10 +10,6 @@ import {Row, Col} from 'react-bootstrap';
 import {Provider} from 'react-redux';
 
 import store from './store'
-// import axios from 'axios';
-// import ReactTable from 'react-table';
-// import 'react-table/react-table.css';
-// import NumberFormat from 'react-number-format';
 
 
 class App extends Component {
@@ -26,7 +21,7 @@ class App extends Component {
                 <div>
                     <div className="header">
                         <div className="container">
-                        TOKOCRYPTO
+                        CRIPTO STORE
                         </div>
                     </div>
                     <div className="container container-content">

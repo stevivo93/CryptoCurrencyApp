@@ -52,8 +52,6 @@ export default function (state = initialState, action) {
             }
 
             state.history.push(action.payload.history);
-
-            console.log(state.history)
             return {
                 ...state,
                 total: totals,

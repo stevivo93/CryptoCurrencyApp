@@ -1,36 +1,10 @@
 import React, {Component} from 'react';
 import NumberFormat from 'react-number-format';
-import {Tab, Tabs, Modal, Button} from 'react-bootstrap';
+import {Tab, Tabs, Modal} from 'react-bootstrap';
 import '../css/trading.css';
 
 import {connect} from 'react-redux';
 import {fetchPosts, buyPosts, sellPosts} from "../actions/postActions";
-
-// function limitMoney(max,val) {
-//     val = parseFloat(val)
-//     // val = 0.777;
-//     console.log(max)
-//     console.log(val)
-//     if (val > max){
-//         val = max
-//     }
-//     let parts = val.toString().split(".");
-//     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-//     return parts.join(".");
-// }
-
-// const inputParsers = {
-//     date(input) {
-//         const [month, day, year] = input.split('/');
-//         return `${year}-${month}-${day}`;
-//     },
-//     uppercase(input) {
-//         return input.toUpperCase();
-//     },
-//     number(input) {
-//         return parseFloat(input);
-//     },
-// };
 
 class Trading extends Component {
     constructor(props, context) {
@@ -192,7 +166,7 @@ class Trading extends Component {
                                 <select name="pick" value={this.state.buyPick} className="selectCurrencyBuy"
                                         onChange={this.onChange.bind(this)}>
                                     <option value={0}>Pilih Token</option>
-                                    {this.props.listData.map(p => <option value={p.id}>{p.name}</option>)}
+                                    {this.props.listData.map((p,idx) => <option key={idx} value={p.id}>{p.name}</option>)}
                                 </select>
                                 <span>Rp.</span>
                                 <NumberFormat name="buy" onChange={this.onChange.bind(this)} className="buy-idr"
@@ -210,7 +184,7 @@ class Trading extends Component {
                                 <select value={this.state.sellPick} className="selectCurrencySell"
                                         onChange={this.onChange.bind(this)}>
                                     <option value={0}>Pilih Token</option>
-                                    {this.props.CC.map(p => <option value={p.id}>{p.name}</option>)}
+                                    {this.props.CC.map((p,idx) => <option value={p.id} key={idx}>{p.name}</option>)}
                                 </select>
                                 <span className="code-currency">{this.state.codeSell}</span>
                                 <NumberFormat onChange={this.onChange.bind(this)} className="sell-cc"
